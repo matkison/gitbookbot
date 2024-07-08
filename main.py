@@ -7,5 +7,8 @@ def main():
 def print_file_contents():
 	file_contents = main()
 	print(file_contents)
-print_file_contents()
-
+def count_words():
+	file_contents = main()
+	split_file_contents = file_contents.split()
+	print(split_file_contents)
+count_words()
