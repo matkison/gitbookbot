@@ -15,18 +15,17 @@ def count_words():
 	print(word_count)
 def each_char_count():
 	file_contents = main()
-	split_file_contents = file_contents.split()
+	lower_file_contents = file_contents.lower()
 	each_char_count = {}
-	for word in split_file_contents:
-		for char in word:
-			#if char in each_char_count != " ":
-				#print("this isn't a space")
-			if char in each_char_count == False:
-				print("first time encountering this char")
-				each_char_count[char] = 1
-			else:
-				print("adding 1 to this char count")
-				each_char_count[char] += 1
+	for char in lower_file_contents:
+		#if char in each_char_count != " ":
+			#print("this isn't a space")
+		if char not in each_char_count:
+			print("first time encountering this char")
+			each_char_count[char] = 1
+		else:
+			print("adding 1 to this char count")
+			each_char_count[char] += 1
 	print(each_char_count)
 each_char_count()			
 
