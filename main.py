@@ -28,6 +28,6 @@ def each_char_count():
 					print("adding 1 to this char count")
 					each_char_count[char] += 1
 	print(each_char_count)
-			
+each_char_count()			
 
 
