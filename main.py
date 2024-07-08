@@ -13,6 +13,7 @@ def count_words():
 	split_file_contents = file_contents.split()
 	word_count = len(split_file_contents)
 	print(word_count)
+	return word_count
 def each_char_count():
 	file_contents = main()
 	lower_file_contents = file_contents.lower()
@@ -26,7 +27,17 @@ def each_char_count():
 		else:
 			#print("adding 1 to this char count")
 			each_char_count[char] += 1
+	return each_char_count
 	print(each_char_count)
-each_char_count()			
+def make_report():
+	each_char_count = each_char_count()
+	word_count = count_words()
+	print("--- Begin report of books/frankenstein.txt ---")
+	print(f"{word_count} words found in the document")
+	for item in each_char_count:
+		print(f"The {item} character was found {each_char_count[item]} times")
+	print("End Report")
+make_report()
+
 
 
