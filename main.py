@@ -10,5 +10,6 @@ def print_file_contents():
 def count_words():
 	file_contents = main()
 	split_file_contents = file_contents.split()
-	print(split_file_contents)
+	word_count = len(split_file_contents)
+	print(word_count)
 count_words()
