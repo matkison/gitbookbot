@@ -24,7 +24,7 @@ def each_char_count():
 			print("first time encountering this char")
 			each_char_count[char] = 1
 		else:
-			print("adding 1 to this char count")
+			#print("adding 1 to this char count")
 			each_char_count[char] += 1
 	print(each_char_count)
 each_char_count()			
