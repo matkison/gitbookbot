@@ -4,8 +4,8 @@ def main():
 		# this saves the frankenstein.txt as f I guess
 		file_contents = f.read()
 	return file_contents
-def print():
-	main()
+def print_file_contents():
+	file_contents = main()
 	print(file_contents)
-print()
+print_file_contents()
 
