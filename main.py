@@ -8,8 +8,26 @@ def print_file_contents():
 	file_contents = main()
 	print(file_contents)
 def count_words():
+	print("Counting words...")
 	file_contents = main()
 	split_file_contents = file_contents.split()
 	word_count = len(split_file_contents)
 	print(word_count)
-count_words()
+def each_char_count():
+	file_contents = main()
+	split_file_contents = file_contents.split()
+	each_char_count = {}
+	for word in split_file_contents:
+		for char in word:
+			if char in each_char_count != " ":
+				print("this isn't a space")
+				if char in each_char_count == False:
+					print("first time encountering this char")
+					each_char_count[char] = 1
+				else:
+					print("adding 1 to this char count")
+					each_char_count[char] += 1
+	print(each_char_count)
+			
+
+
